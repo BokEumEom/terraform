@@ -52,11 +52,11 @@ resource "aws_ecs_service" "web" {
     }
 
     service {
-      port_name             = "web-3000-tcp"
+      port_name             = "web"
       discovery_name        = "web"
-      ingress_port_override = 9901
+      # ingress_port_override = 9901
       client_alias {
-        dns_name = "web"
+        # dns_name = "web"
         port     = 3000
       }
     }
