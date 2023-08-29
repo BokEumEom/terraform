@@ -13,6 +13,13 @@
         "awslogs-stream-prefix": "ecs"
       }
     },
+    "ulimits": [
+        {
+          "name": "nofile",
+          "softLimit": 65536,
+          "hardLimit": 65536
+        }
+      ],
     "portMappings": [
       {
         "hostPort": 14269,
